@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:context=".ui.biography.BiographyFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bioImageCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="2dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBioImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bioInfoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/bioImageCard">
+
+            <TextView
+                android:id="@+id/txtBioName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorRed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconActing"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_acting"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/txtBioName"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtBioDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iconActing"
+                app:layout_constraintTop_toBottomOf="@id/txtBioName" />
+
+            <ImageView
+                android:id="@+id/iconDOB"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_birthday"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/iconActing"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtBioDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iconDOB"
+                app:layout_constraintTop_toBottomOf="@id/txtBioDepartment" />
+
+            <ImageView
+                android:id="@+id/iconBirthPlace"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/iconDOB"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtBioBirthPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iconBirthPlace"
+                app:layout_constraintTop_toBottomOf="@id/txtBioDOB" />
+
+            <ImageView
+                android:id="@+id/iconTopPopular"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_top_popularity"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/iconBirthPlace"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtBioPopularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iconTopPopular"
+                app:layout_constraintTop_toBottomOf="@id/txtBioBirthPlace" />
+
+            <ImageView
+                android:id="@+id/iconDeath"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_death"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/iconTopPopular"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtBioDOD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iconDeath"
+                app:layout_constraintTop_toBottomOf="@id/txtBioPopularity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtBioBiography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bioImageCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
